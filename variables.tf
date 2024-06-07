@@ -7,8 +7,8 @@ variable "example_subdomains" {
     dev = {
       name = "dev"
     },
-    mysq-db-dev = {
-      name = "mysq-db-dev"
+    mysql-db-dev = {
+      name = "mysql-db-dev"
     }
   }
 }
