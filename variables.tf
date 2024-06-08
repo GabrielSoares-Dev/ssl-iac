@@ -6,9 +6,6 @@ variable "example_subdomains" {
   default = {
     dev = {
       name = "dev"
-    },
-    mysql-db-dev = {
-      name = "mysql-db-dev"
     }
   }
 }
