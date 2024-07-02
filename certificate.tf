@@ -1,5 +1,4 @@
-resource "aws_acm_certificate" "certificate_examples_subdomains" {
-  for_each          = var.example_subdomains
-  domain_name       = "${each.value.name}.${var.default_example_domain}"
+resource "aws_acm_certificate" "certificate_subdomain" {
+  domain_name       = "${lower(var.environment)}.${var.default_example_domain}"
   validation_method = "DNS"
 }
