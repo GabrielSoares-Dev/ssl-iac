@@ -18,5 +18,4 @@ resource "aws_route53_record" "validation_acm" {
 resource "aws_acm_certificate_validation" "validation" {
   certificate_arn         = aws_acm_certificate.certificate_examples_subdomains[0].arn
   validation_record_fqdns = [for record in aws_route53_record.validation_acm : record.fqdn]
-  provider          = aws.us_east-2
 }
