@@ -1,6 +1,6 @@
 resource "aws_route53_record" "validation_acm" {
   for_each = {
-    for dvo in aws_acm_certificate.certificate_examples_subdomains[0].domain_validation_options : dvo.domain_name => {
+    for dvo in aws_acm_certificate.certificate_examples_subdomains.domain_validation_options : dvo.domain_name => {
       name   = dvo.resource_record_name
       record = dvo.resource_record_value
       type   = dvo.resource_record_type
