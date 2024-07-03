@@ -1,4 +1,4 @@
-variable "default_example_domain" {
+variable "domain" {
   type    = string
   default = "gabrieltest.shop"
 }
